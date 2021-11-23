@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 15em;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.slides-wrapper {
+    width: 100%;
+}
+
+/* .slides {
+    border: 1px solid black;
+} */
+
+.slides-item-inner {
+    position: relative;
+    width:  100%;
+    height: 400px;
+}
+
+.slides-item-inner img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain;*/ /* это центрирует фото внутри дива */
+    object-fit: cover;
+}
+
+/*  если мы хотим горизонтально и находился внизу или на (вверху padding:0;) */
+/*.slides-item-inner h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* ширину даем потому что, при абсалютном позиционировании у него ширина зависеть от контента */
+    /*padding: 1em;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+*/
+
+/*  если мы хотим вертикально и находился в левом или в правом боку */
+.slides-item-inner h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%; 
+    height: 100%;
+    padding: 1em;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    background-color: rgba(252, 248, 248, 0.4);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-prev {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.slides .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slides .slick-dots li {
+    margin-right: 14px;
+}
+
+.slides .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slides .slick-active button {
+    background-color: white;
+}
